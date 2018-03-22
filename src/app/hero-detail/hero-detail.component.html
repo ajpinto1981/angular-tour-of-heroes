@@ -5,6 +5,14 @@
       <label>name:
         <input [(ngModel)]="hero.name" placeholder="name">
       </label>
+      <h2>Power Boost Calculator</h2>
+      <div>Normal power: <input [(ngModel)]="power"></div>
+      <div>Boost factor: <input [(ngModel)]="factor"></div>
+      <p>
+        Super Hero Power: {{power | exponentialStrength: factor}}
+      </p>
+      <h2>Power Booster</h2>
+      <p>Super power boost: {{2 | exponentialStrength: 10}}</p>
   </div>
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>

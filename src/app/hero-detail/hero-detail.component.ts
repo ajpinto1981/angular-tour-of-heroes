@@ -13,6 +13,8 @@ import { HeroService }  from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
+  power = 5;
+  factor = 1;
  
   constructor(
     private route: ActivatedRoute,
